@@ -1,0 +1,17 @@
+from building import *
+
+cwd = GetCurrentDir()
+src = [
+    'chassis_app.c',
+    'chassis_control.c',
+    'chassis_link.c',
+    'motor_bts7960.c',
+    'ultrasonic_hcsr04.c',
+]
+
+CPPPATH = [cwd]
+group = DefineGroup('wheelchair_chassis', src,
+                    depend=['RT_USING_SERIAL', 'RT_USING_PWM'],
+                    CPPPATH=CPPPATH)
+
+Return('group')

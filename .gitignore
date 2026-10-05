@@ -1,0 +1,13 @@
+build/
+managed_components/
+sdkconfig
+sdkconfig.old
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+*.bin
+*.elf
+*.map
+.env
+secrets.*
